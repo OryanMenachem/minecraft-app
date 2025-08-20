@@ -8,8 +8,6 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fill, 48px);
   grid-template-rows: repeat(auto-fill, 48px);
-
-  background-color: #e8e9ac;
 }
 .sky {
   background-color: aqua;
