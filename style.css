@@ -9,18 +9,19 @@ body {
   grid-template-columns: repeat(auto-fill, 48px);
   grid-template-rows: repeat(auto-fill, 48px);
 }
+
 .sky {
   background-color: aqua;
 }
 .grass {
-  background-color: rgb(120, 235, 120);
+  background-image: url("./images/grass.webp");
 }
 .dirt {
-  background-color: burlywood;
+  background-image: url("./images/dirt.webp");
 }
 .soil {
-  background-color: gray;
+  background-image: url("./images/stone.webp");
 }
 .rock {
-  background-color: rgb(47, 41, 41);
+  background-image: url("./images/bedrock.webp");
 }
