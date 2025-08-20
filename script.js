@@ -17,19 +17,23 @@ for (let i = 0; i < 3000; i++) {
   main.appendChild(div);
 }
 
-// for test
-const test = {
+// this object for save the number of tile
+const listOfTile = {
   rock: 2,
-  soil: 0,
+  soil: 5,
   dirt: 5,
   grass: 0
 }
 
-
-let selectedTool = "";
+// this function for chenge tile from sky to selected tool
+let selectedTool = "dirt";
 main.addEventListener("click", (e) => {
   if (e.target.classList[2] === "sky") {
-    e.target.classList.replace("sky", selectedTool)
+    if (listOfTile[selectedTool] > 0) {
+      e.target.classList.replace("sky", selectedTool )
+      listOfTile[selectedTool] -=1
+      console.log(listOfTile[selectedTool] ); 
+    }
   }
   else {
     console.log("Not sky!");
