@@ -22,6 +22,26 @@
     8px 8px 0 #000;
 }
 
+
+.btn--audio {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #6b4a32;
+  border: 2px solid #4e3323;
+  box-shadow: 0 4px 0 #3a2618;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.btn-icon {
+  width: 30px;
+  height: 30px;
+  color: white;
+}
 .main--index {
   grid-row: 2 / 3;
   width: 100%;
@@ -51,19 +71,19 @@
   font-size: large;
   letter-spacing: 1px;
   color: white;
-  background-color: #6b4a32; 
-  border: 2px solid #4e3323; 
-  box-shadow: 0 4px 0 #3a2618; 
+  background-color: #6b4a32;
+  border: 2px solid #4e3323;
+  box-shadow: 0 4px 0 #3a2618;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
-
+.btn--audio:hover,
 .btn--new-game:hover,
 .btn--continue-game:hover {
-  background: linear-gradient(145deg, #8c6a4c, #6b4a32); 
-  border: 2px solid #4e3323;
-  box-shadow: 0 6px 0 #3a2618;
-  transform: translateY(-2px) scale(1.05); 
+  background: linear-gradient(145deg, #6ca06c, #3a8d3a);
+  border: 2px solid #2e6b2e;
+  box-shadow: 0 6px 0 #1f4c1f;
+  transform: translateY(-2px) scale(1.05);
 }
 
 .footer {
