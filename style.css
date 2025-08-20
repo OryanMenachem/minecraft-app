@@ -1,3 +1,58 @@
+.inventory {
+  padding-left: 10px;
+  display: flex;
+  position: fixed;
+  top: 4rem;
+  width: fit-content;
+  flex-direction: column;
+  margin-left: 1rem;
+  background-position: center center;
+  background-size: cover;
+  z-index: 1000;
+}
+
+#Tool-and-tile-stack {
+  background-color: transparent;
+  display: inline-block;
+  width: 3rem;
+  width: 3rem;
+  margin: 2px;
+  padding: 0.2rem;
+}
+
+.item {
+  width: 48px;
+  height: 48px;
+
+  margin: 5px;
+}
+
+#hand-axe {
+  background-image: url("./images/hand-axe.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#garden-hoe {
+  background-image: url("./images/garden-hoe.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#garden-shovel{
+      background-image: url("./images/garden-shovel.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#garden-shears{
+          background-image: url("./images/garden-shears.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 body {
   margin: 0px;
   padding: 0px;
@@ -24,6 +79,14 @@ body {
 .rock {
   background-color: rgb(47, 41, 41);
 }
+
+
+.leaves {
+  background-color: green;
+}
+
+.trunk {
+  background-color: brown;
 
 .page--index {
   background: url("./assets/images/minecraft.jpeg") no-repeat center center;
@@ -138,4 +201,5 @@ body {
 @font-face {
   font-family: "Minecrafter";
   src: url("./assets/fonts/Minecrafter.Alt.ttf") format("truetype");
+
 }
