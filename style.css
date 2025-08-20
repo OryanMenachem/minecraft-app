@@ -1,3 +1,30 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+.main.main--minecraft {
+  width: 4800px;
+  height: 1440px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 48px);
+  grid-template-rows: repeat(auto-fill, 48px);
+}
+.sky {
+  background-color: aqua;
+}
+.grass {
+  background-color: rgb(120, 235, 120);
+}
+.dirt {
+  background-color: burlywood;
+}
+.soil {
+  background-color: gray;
+}
+.rock {
+  background-color: rgb(47, 41, 41);
+}
+
 .page--index {
   background: url("./assets/images/minecraft.jpeg") no-repeat center center;
   background-size: cover;
@@ -21,7 +48,6 @@
   text-shadow: 2px 2px 0 #4e3323, 4px 4px 0 #3a2618, 6px 6px 0 #2a1b12,
     8px 8px 0 #000;
 }
-
 
 .btn--audio {
   width: 50px;
@@ -77,6 +103,7 @@
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
+
 .btn--audio:hover,
 .btn--new-game:hover,
 .btn--continue-game:hover {
