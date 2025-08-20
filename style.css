@@ -1,3 +1,4 @@
+
 .inventory {
   padding-left: 10px;
   display: flex;
@@ -36,3 +37,31 @@
     background-position: center; 
     background-repeat: no-repeat; 
 }
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+.main.main--minecraft{
+  width: 4800px;
+  height: 1440px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 48px);
+  grid-template-rows: repeat(auto-fill, 48px);
+}
+.sky {
+  background-color: aqua;
+}
+.grass {
+  background-color: rgb(120, 235, 120);
+}
+.dirt {
+  background-color: burlywood;
+}
+.soil {
+  background-color: gray;
+}
+.rock {
+  background-color: rgb(47, 41, 41);
+}
+
