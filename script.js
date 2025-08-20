@@ -2,7 +2,7 @@ const main = document.querySelector(".main.main--minecraft");
 
 for (let i = 0; i < 3000; i++) {
   const div = document.createElement("div");
-  div.classList.add("div div--tile");
+  div.classList.add("div", "div--tile");
   if (i <= 1199) {
     div.classList.add("sky");
   } else if (i >= 1200 && i <= 1299) {
@@ -17,12 +17,22 @@ for (let i = 0; i < 3000; i++) {
   main.appendChild(div);
 }
 
-const div = document.querySelector("div")
+// for test
+const test = {
+  rock: 2,
+  soil: 0,
+  dirt: 5,
+  grass: 0
+}
+
+
 let selectedTool = "";
-
-div.addEventListener("click",()=>{
-    if(selectedTool==="sky"){
-        div.classList.add()
-    }
-
+main.addEventListener("click", (e) => {
+  if (e.target.classList[2] === "sky") {
+    e.target.classList.replace("sky", selectedTool)
+  }
+  else {
+    console.log("Not sky!");
+    console.log(e.target.classList[2]);
+  }
 })
