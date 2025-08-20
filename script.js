@@ -25,8 +25,8 @@ const listOfTile = {
   grass: 0
 }
 
-// this function for chenge tile from sky to selected tool
-let selectedTool = "dirt";
+// this function for change tile from sky to selected toollet selectedTool = "dirt";
+let selectedTool = ""
 main.addEventListener("click", (e) => {
   if (e.target.classList[2] === "sky") {
     if (listOfTile[selectedTool] > 0) {
