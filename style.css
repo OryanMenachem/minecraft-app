@@ -1,0 +1,38 @@
+.inventory {
+  padding-left: 10px;
+  display: flex;
+  position: fixed;
+  top: 4rem;
+  width: fit-content;
+  flex-direction: column;
+  margin-left: 1rem;
+  background-position: center center;
+  background-size: cover;
+  z-index: 1000; 
+}
+
+
+#Tool-and-tile-stack {
+  background-color: transparent;
+  display: inline-block;
+  width: 3rem;
+  width: 3rem;
+  margin: 2px;
+  padding: 0.2rem;
+}
+
+.item {
+  width: 48px;
+  height: 48px;
+  background-color: yellow;
+
+  margin: 5px;
+}
+
+#ax{
+
+    background-image: url('axe.png'); 
+    background-size: cover;    
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
