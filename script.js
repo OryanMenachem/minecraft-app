@@ -1,13 +1,16 @@
 // --- Variables ---
 const clickSound = new Audio("./assets/audio/click-suond.mp3");
-const music = new Audio("./assets/audio/minecraft-mod.mp3");
-music.loop = true;
+const minecraftMelody = new Audio("./assets/audio/minecraft-mod.mp3");
+const hitlerSpeech = new Audio("./assets/audio/Hitler-Speech.mp3"); // ---
+minecraftMelody.loop = true;
 
 const btnAudio = document.querySelector(".btn--audio");
 const btnIcon = document.querySelector(".btn-icon");
 const btnNewGame = document.querySelector(".btn.btn--new-game");
 const buttons = document.querySelectorAll("button");
 const minecraftTitle = document.querySelector(".title--minecraft");
+const germansUI = document.querySelector(".btn--germans");
+const indexPage = document.querySelector(".page--index");
 
 // --- Play click sound on all buttons ---
 buttons.forEach((btn) => {
@@ -20,11 +23,11 @@ buttons.forEach((btn) => {
 // --- Audio toggle ---
 if (btnAudio && btnIcon) {
   btnAudio.addEventListener("click", () => {
-    if (music.paused) {
-      music.play();
+    if (minecraftMelody.paused) {
+      minecraftMelody.play();
       btnIcon.src = "./assets/icons/volume-on.svg";
     } else {
-      music.pause();
+      minecraftMelody.pause();
       btnIcon.src = "./assets/icons/volume-off.svg";
     }
   });
@@ -43,24 +46,39 @@ if (btnNewGame) {
   });
 }
 
-// --- Minecraft title click ---
-if (minecraftTitle) {
-  minecraftTitle.addEventListener("click", () => {
+// --- germans UI click ---
+const originalText = minecraftTitle.textContent;
+const originalImg = indexPage.style.background;
+germansUI.addEventListener("click", () => {
+  const isActive = germansUI.classList.toggle("is-playing");
+
+  if (isActive) {
+    hitlerSpeech.currentTime = 0;
+    hitlerSpeech.play();
+    indexPage.style.background =
+      'url("./assets/images/Hitler.jpeg")  no-repeat center center';
+indexPage.style.backgroundSize = "cover";
+
     minecraftTitle.textContent = "Mein Kampf";
-  });
-}
+  } else {
+    hitlerSpeech.pause();
+    hitlerSpeech.currentTime = 0;
+    minecraftTitle.textContent = originalText;
+    indexPage.style.background = originalImg;
+  }
+});
 
 // --- Minecraft world and tools (only on minecraft.html) ---
 const main = document.querySelector(".main.main--minecraft");
-const tools = document.querySelector("#Tool-and-tile-stack");
+// const tools = document.querySelector("#Tool-and-tile-stack");
 
-// if (main && tools) {
-let selectedTool = "";
+// // if (main && tools) {
+// let selectedTool = "";
 
-// Select tool from inventory
-tools.addEventListener("click", (e) => {
-  selectedTool = e.target.id;
-});
+// // Select tool from inventory
+// tools.addEventListener("click", (e) => {
+//   selectedTool = e.target.id;
+// });
 
 // Create world tiles
 for (let i = 0; i < 3000; i++) {
@@ -77,26 +95,26 @@ for (let i = 0; i < 3000; i++) {
 }
 
 // Handle clicks on the world
-main.addEventListener("click", (e) => {
-  if (selectedTool === "garden-hoe" && e.target.classList.contains("soil")) {
-    e.target.classList.replace("soil", "sky");
-  }
+// main.addEventListener("click", (e) => {
+//   if (selectedTool === "garden-hoe" && e.target.classList.contains("soil")) {
+//     e.target.classList.replace("soil", "sky");
+//   }
 
-  if (selectedTool === "hand-axe" && e.target.classList.contains("trunk")) {
-    e.target.classList.replace("trunk", "sky");
-  }
+//   if (selectedTool === "hand-axe" && e.target.classList.contains("trunk")) {
+//     e.target.classList.replace("trunk", "sky");
+//   }
 
-  if (selectedTool === "garden-shovel") {
-    if (e.target.classList.contains("dirt"))
-      e.target.classList.replace("dirt", "sky");
-    else if (e.target.classList.contains("grass"))
-      e.target.classList.replace("grass", "sky");
-  }
+//   if (selectedTool === "garden-shovel") {
+//     if (e.target.classList.contains("dirt"))
+//       e.target.classList.replace("dirt", "sky");
+//     else if (e.target.classList.contains("grass"))
+//       e.target.classList.replace("grass", "sky");
+//   }
 
-  if (
-    selectedTool === "garden-shears" &&
-    e.target.classList.contains("Leaves")
-  ) {
-    e.target.classList.replace("Leaves", "sky");
-  }
-});
+//   if (
+//     selectedTool === "garden-shears" &&
+//     e.target.classList.contains("Leaves")
+//   ) {
+//     e.target.classList.replace("Leaves", "sky");
+//   }
+// });
