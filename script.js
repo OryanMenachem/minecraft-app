@@ -39,7 +39,7 @@ main.addEventListener("click", (e) => {
       e.target.classList.replace("grass", "sky");
     }
   }
-
+});
   if (
     selectedTool === "garden-shears" &&
     e.target.classList.contains("Leaves")
