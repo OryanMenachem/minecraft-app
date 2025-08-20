@@ -1,9 +1,8 @@
-const main = document.querySelector("main");
+const main = document.querySelector(".main.main--minecraft");
 
 for (let i = 0; i < 3000; i++) {
   const div = document.createElement("div");
-  const p = document.createElement("p");
-  div.classList.add("cell");
+  div.classList.add("div div--tile");
   if (i <= 1199) {
     div.classList.add("sky");
   } else if (i >= 1200 && i <= 1299) {
