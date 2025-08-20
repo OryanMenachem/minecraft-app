@@ -1,2 +1,26 @@
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Workspace/Editor settings
+.vscode/
+.idea/
+*.swp
+
+# Build/Cache (if using Node.js tools)
+dist/
+build/
+.cache/
+
+# Node dependencies
+node_modules/
+
+# Environment files (private)
+.env
+.env.local
+
 test.css
 test.html
