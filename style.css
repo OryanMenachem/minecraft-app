@@ -46,15 +46,15 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-#garden-shovel {
-  background-image: url("./assets/images/garden-shovel.webp");
+#garden-shovel{
+      background-image: url("./assets/images/garden-shovel.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-#garden-shears {
-  background-image: url("./assets/images/garden-shears.webp");
+#garden-shears{
+          background-image: url("./assets/images/garden-shears.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
