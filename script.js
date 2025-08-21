@@ -2,6 +2,31 @@ const main = document.querySelector(".main.main--minecraft");
 const tools = document.querySelector("#Tool-and-tile-stack");
 let selectedTool = "";
 
+const toolCursors = {
+  "hand-axe": "./images/hand-axe.png",
+  "garden-hoe": "./images/garden-hoe.png",
+  "garden-shovel": "./images/garden-shovel.png",
+  "garden-shears": "./images/garden-shears.png"
+};
+
+const items = document.querySelectorAll("#Tool-and-tile-stack .item");
+
+function setCursor(toolId) {
+  if(toolCursors[toolId]) {
+    document.body.style.cursor = `url("${toolCursors[toolId]}") 16 16, auto`;
+  } else {
+    document.body.style.cursor = "auto";
+  }
+}
+
+items.forEach(item => {
+  item.addEventListener("click", () => {
+    setCursor(item.id);
+  });
+});
+
+
+
 for (let i = 0; i < 3000; i++) {
   const div = document.createElement("div");
   div.classList.add("div", "div--tile");

@@ -41,14 +41,14 @@
   background-repeat: no-repeat;
 }
 #garden-shovel{
-      background-image: url("./images/garden-shovel.webp");
+      background-image: url("./images/garden-shovel.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 #garden-shears{
-          background-image: url("./images/garden-shears.webp");
+          background-image: url("./images/garden-shears.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
