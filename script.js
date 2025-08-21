@@ -1,5 +1,5 @@
 const main = document.querySelector(".main.main--minecraft");
-const clickSound = new Audio("./assets/audio/click-suond.mp3");
+const clickSound = new Audio("./assets/audio/click-sound.mp3");
 const minecraftMelody = new Audio("./assets/audio/minecraft-mod.mp3");
 const hitlerSpeech = new Audio("./assets/audio/Hitler-Speech.mp3");
 minecraftMelody.loop = true;
@@ -122,7 +122,10 @@ if (main && tools) {
         e.target.classList.replace("soil", "sky");
       }
 
-      if (selectedTool === "hand-axe" && e.target.classList.contains("race_img")) {
+      if (
+        selectedTool === "hand-axe" &&
+        e.target.classList.contains("race_img")
+      ) {
         e.target.classList.replace("race_img", "sky");
       }
 
