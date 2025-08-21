@@ -82,6 +82,7 @@ if (germansUI && minecraftTitle && indexPage) {
 if (main) {
   for (let i = 0; i < 3000; i++) {
     const div = document.createElement("div");
+    div.classList.add("div", "div--tile");
     if (i <= 1199) div.classList.add("sky");
     else if (i <= 1299) div.classList.add("grass");
     else if (i <= 1799) div.classList.add("dirt");
