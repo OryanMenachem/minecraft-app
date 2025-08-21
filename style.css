@@ -70,7 +70,7 @@ body {
 }
 
 .sky {
-  background-color: aqua;
+  background-color: #87ceeb;
 }
 .grass {
   background-image: url("./assets/images/grass.webp");
@@ -259,7 +259,7 @@ section.buttons {
   grid-template-columns: repeat(3, 1fr);
 }
 .blue {
-  background-color: aqua;
+  background-color: #87ceeb;
 }
 
 #colom_2 {
