@@ -1,5 +1,4 @@
 const main = document.querySelector(".main.main--minecraft");
-const tools = document.querySelector("#Tool-and-tile-stack");
 const clickSound = new Audio("./assets/audio/click-suond.mp3");
 const minecraftMelody = new Audio("./assets/audio/minecraft-mod.mp3");
 const hitlerSpeech = new Audio("./assets/audio/Hitler-Speech.mp3");
@@ -96,6 +95,7 @@ if (main) {
   console.error("Main element with class 'main main--minecraft' not found.");
 }
 
+const tools = document.querySelector("#Tool-and-tile-stack");
 
 if (main && tools) {
   let selectedTool = "";
@@ -109,11 +109,29 @@ if (main && tools) {
     if (selectedTool === "garden-hoe" && e.target.classList.contains("soil")) {
       e.target.classList.replace("soil", "sky");
     }
+  // Select tool from inventory
+  tools.addEventListener("click", (e) => {
+    selectedTool = e.target.id;
+  });
+  // Handle clicks on the world
+  main.addEventListener("click", (e) => {
+    if (selectedTool === "garden-hoe" && e.target.classList.contains("soil")) {
+      e.target.classList.replace("soil", "sky");
+    }
 
     if (selectedTool === "hand-axe" && e.target.classList.contains("trunk")) {
       e.target.classList.replace("trunk", "sky");
     }
+    if (selectedTool === "hand-axe" && e.target.classList.contains("trunk")) {
+      e.target.classList.replace("trunk", "sky");
+    }
 
+    if (selectedTool === "garden-shovel") {
+      if (e.target.classList.contains("dirt"))
+        e.target.classList.replace("dirt", "sky");
+      else if (e.target.classList.contains("grass"))
+        e.target.classList.replace("grass", "sky");
+    }
     if (selectedTool === "garden-shovel") {
       if (e.target.classList.contains("dirt"))
         e.target.classList.replace("dirt", "sky");
@@ -128,22 +146,21 @@ if (main && tools) {
       e.target.classList.replace("Leaves", "sky");
     }
   });
-}
-
+})}
 
 // Tool ID → cursor image mapping
 const toolCursors = {
   "hand-axe": "./assets/images/hand-axe.png",
   "garden-hoe": "./assets/images/garden-hoe.png",
-  "garden-shovel": "./assets/images/garden-shovel.png",
-  "garden-shears": "./assets/images/garden-shears.png"
+  "garden-shovel": "./assets/images/garden-shovel.webp",
+  "garden-shears": "./assets/images/garden-shears.webp",
 };
 // All tool items inside inventory
 const items = document.querySelectorAll("#Tool-and-tile-stack .item");
 
 // Change cursor to tool image (or default if not found)
 function setCursor(toolId) {
-  if(toolCursors[toolId]) {
+  if (toolCursors[toolId]) {
     document.body.style.cursor = `url("${toolCursors[toolId]}") 16 16, auto`;
   } else {
     document.body.style.cursor = "auto";
@@ -151,7 +168,7 @@ function setCursor(toolId) {
 }
 
 // On click: update cursor to the clicked tool
-items.forEach(item => {
+items.forEach((item) => {
   item.addEventListener("click", () => {
     setCursor(item.id);
   });
