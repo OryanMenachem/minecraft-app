@@ -213,18 +213,21 @@ body {
   src: url("./assets/fonts/Minecrafter.Alt.ttf") format("truetype");
 }
 
+
+/* Moti */
 #soil-tile {
-  background-image: url("./images/stone.webp");
+  background-image: url("./assets/images/stone.webp");
 }
 #dirt-tile {
-  background-image: url("./images/dirt.webp");
+  background-image: url("./assets/images/dirt.webp");
 }
 #grass-tile {
-  background-image: url("./images/grass.webp");
+  background-image: url("./assets/images/grass.webp");
 }
 #trunk-tile {
-  background-image: url("./images/race.png");
+  background-image: url("./assets/images/race.png");
 }
 #Leaves-tile {
-  background-image: url("./images/leaves.png");
+  background-image: url("./assets/images/leaves.png");
 }
+/* End write Moti */
