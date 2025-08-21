@@ -96,6 +96,7 @@ if (main) {
 }
 
 const tools = document.querySelector("#Tool-and-tile-stack");
+let selectedTool = "";
 
 if (main && tools) {
   let selectedTool = "";}
@@ -204,7 +205,6 @@ main.addEventListener("click", (e) => {
       listOfTile.grass += 1;
       grassTileEl.style.display = listOfTile.grass === 0 ? "none" : "block";
       document.querySelector("#grass-tile .count").textContent = listOfTile.grass;
-
     }
   }
 });
