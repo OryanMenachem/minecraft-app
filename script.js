@@ -1,5 +1,4 @@
 const main = document.querySelector(".main.main--minecraft");
-const tools = document.querySelector("#Tool-and-tile-stack");
 const clickSound = new Audio("./assets/audio/click-suond.mp3");
 const minecraftMelody = new Audio("./assets/audio/minecraft-mod.mp3");
 const hitlerSpeech = new Audio("./assets/audio/Hitler-Speech.mp3");
@@ -147,7 +146,7 @@ if (main && tools) {
       e.target.classList.replace("Leaves", "sky");
     }
   });
-}
+})}
 
 // Tool ID → cursor image mapping
 const toolCursors = {
