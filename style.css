@@ -34,27 +34,27 @@
 }
 
 #hand-axe {
-  background-image: url("./images/hand-axe.png");
+  background-image: url("./assets/images/hand-axe.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 #garden-hoe {
-  background-image: url("./images/garden-hoe.png");
+  background-image: url("./assets/images/garden-hoe.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 #garden-shovel {
-  background-image: url("./images/garden-shovel.webp");
+  background-image: url("./assets/images/garden-shovel.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 #garden-shears {
-  background-image: url("./images/garden-shears.webp");
+  background-image: url("./assets/images/garden-shears.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -75,16 +75,16 @@ body {
   background-color: aqua;
 }
 .grass {
-  background-image: url("./images/grass.webp");
+  background-image: url("./assets/images/grass.webp");
 }
 .dirt {
-  background-image: url("./images/dirt.webp");
+  background-image: url("./assets/images/dirt.webp");
 }
 .soil {
-  background-image: url("./images/stone.webp");
+  background-image: url("./assets/images/stone.webp");
 }
 .rock {
-  background-image: url("./images/bedrock.webp");
+  background-image: url("./assets/images/bedrock.webp");
 }
 
 .leaves {
@@ -199,7 +199,7 @@ section.buttons {
   background-color: #6b4a32;
   border: 2px solid #4e3323;
   box-shadow: 0 4px 0 #3a2618;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s;
   cursor: pointer;
 }
 .btn--germans:hover,
@@ -234,11 +234,10 @@ section.buttons {
   font-family: "Minecrafter";
   src: url("./assets/fonts/Minecrafter.Alt.ttf") format("truetype");
 }
-
-@media (max-width: 767px) {
-  .page--index {
-    height: auto;
-    grid-template-rows: 1fr 4fr 6fr 1fr;
-    background-position: center top;
+/* 
+@media screen and (max-width: 480px) {
+  .background-container {
+    background-size: contain; 
+    min-height: 60vh; 
   }
-}
+} */
