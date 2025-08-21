@@ -109,51 +109,46 @@ if (main && tools) {
     if (selectedTool === "garden-hoe" && e.target.classList.contains("soil")) {
       e.target.classList.replace("soil", "sky");
     }
-  // Select tool from inventory
-  tools.addEventListener("click", (e) => {
-    selectedTool = e.target.id;
+    // Select tool from inventory
+    tools.addEventListener("click", (e) => {
+      selectedTool = e.target.id;
+    });
+    // Handle clicks on the world
+    main.addEventListener("click", (e) => {
+      if (
+        selectedTool === "garden-hoe" &&
+        e.target.classList.contains("soil")
+      ) {
+        e.target.classList.replace("soil", "sky");
+      }
+
+      if (selectedTool === "hand-axe" && e.target.classList.contains("race_img")) {
+        e.target.classList.replace("race_img", "sky");
+      }
+
+      if (selectedTool === "garden-shovel") {
+        if (e.target.classList.contains("dirt"))
+          e.target.classList.replace("dirt", "sky");
+        else if (e.target.classList.contains("grass"))
+          e.target.classList.replace("grass", "sky");
+      }
+
+      if (
+        selectedTool === "garden-shears" &&
+        e.target.classList.contains("leaves_img")
+      ) {
+        e.target.classList.replace("leaves_img", "sky");
+      }
+    });
   });
-  // Handle clicks on the world
-  main.addEventListener("click", (e) => {
-    if (selectedTool === "garden-hoe" && e.target.classList.contains("soil")) {
-      e.target.classList.replace("soil", "sky");
-    }
-
-    if (selectedTool === "hand-axe" && e.target.classList.contains("trunk")) {
-      e.target.classList.replace("trunk", "sky");
-    }
-    if (selectedTool === "hand-axe" && e.target.classList.contains("trunk")) {
-      e.target.classList.replace("trunk", "sky");
-    }
-
-    if (selectedTool === "garden-shovel") {
-      if (e.target.classList.contains("dirt"))
-        e.target.classList.replace("dirt", "sky");
-      else if (e.target.classList.contains("grass"))
-        e.target.classList.replace("grass", "sky");
-    }
-    if (selectedTool === "garden-shovel") {
-      if (e.target.classList.contains("dirt"))
-        e.target.classList.replace("dirt", "sky");
-      else if (e.target.classList.contains("grass"))
-        e.target.classList.replace("grass", "sky");
-    }
-
-    if (
-      selectedTool === "garden-shears" &&
-      e.target.classList.contains("Leaves")
-    ) {
-      e.target.classList.replace("Leaves", "sky");
-    }
-  });
-})}
+}
 
 // Tool ID → cursor image mapping
 const toolCursors = {
   "hand-axe": "./assets/images/hand-axe.png",
   "garden-hoe": "./assets/images/garden-hoe.png",
-  "garden-shovel": "./assets/images/garden-shovel.webp",
-  "garden-shears": "./assets/images/garden-shears.webp",
+  "garden-shovel": "./assets/images/garden-shovel.png",
+  "garden-shears": "./assets/images/garden-shears.png",
 };
 // All tool items inside inventory
 const items = document.querySelectorAll("#Tool-and-tile-stack .item");
