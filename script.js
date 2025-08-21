@@ -1,4 +1,5 @@
-// --- Variables ---
+const main = document.querySelector(".main.main--minecraft");
+const tools = document.querySelector("#Tool-and-tile-stack");
 const clickSound = new Audio("./assets/audio/click-suond.mp3");
 const minecraftMelody = new Audio("./assets/audio/minecraft-mod.mp3");
 const hitlerSpeech = new Audio("./assets/audio/Hitler-Speech.mp3");
@@ -11,7 +12,6 @@ const buttons = document.querySelectorAll("button");
 const minecraftTitle = document.querySelector(".title--minecraft");
 const germansUI = document.querySelector(".btn--germans");
 const indexPage = document.querySelector(".page--index");
-const main = document.querySelector(".main.main--minecraft");
 
 // --- Play click sound on all buttons ---
 buttons.forEach((btn) => {
@@ -110,11 +110,29 @@ if (main && tools) {
     if (selectedTool === "garden-hoe" && e.target.classList.contains("soil")) {
       e.target.classList.replace("soil", "sky");
     }
+  // Select tool from inventory
+  tools.addEventListener("click", (e) => {
+    selectedTool = e.target.id;
+  });
+  // Handle clicks on the world
+  main.addEventListener("click", (e) => {
+    if (selectedTool === "garden-hoe" && e.target.classList.contains("soil")) {
+      e.target.classList.replace("soil", "sky");
+    }
 
     if (selectedTool === "hand-axe" && e.target.classList.contains("trunk")) {
       e.target.classList.replace("trunk", "sky");
     }
+    if (selectedTool === "hand-axe" && e.target.classList.contains("trunk")) {
+      e.target.classList.replace("trunk", "sky");
+    }
 
+    if (selectedTool === "garden-shovel") {
+      if (e.target.classList.contains("dirt"))
+        e.target.classList.replace("dirt", "sky");
+      else if (e.target.classList.contains("grass"))
+        e.target.classList.replace("grass", "sky");
+    }
     if (selectedTool === "garden-shovel") {
       if (e.target.classList.contains("dirt"))
         e.target.classList.replace("dirt", "sky");
