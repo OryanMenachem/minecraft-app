@@ -65,12 +65,13 @@ body {
   width: 4800px;
   height: 1440px;
   display: grid;
+  position: relative;
   grid-template-columns: repeat(auto-fill, 48px);
   grid-template-rows: repeat(auto-fill, 48px);
 }
 
 .sky {
-  background-color: aqua;
+  background-color: #87ceeb;
 }
 .grass {
   background-image: url("./assets/images/grass.webp");
@@ -243,7 +244,10 @@ section.buttons {
 
 #tree {
   grid-column: 10 / 17;
-  grid-row: 4 /16;
+  grid-row: 3 /14;
+ position: absolute; 
+ inset: 0;
+  z-index: 100
 }
 
 #leaves {
@@ -258,10 +262,6 @@ section.buttons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-.blue {
-  background-color: aqua;
-}
-
 #colom_2 {
   grid-column: 3 / 6;
   grid-row: 2 / 3;
@@ -300,16 +300,11 @@ section.buttons {
   background-repeat: no-repeat;
   background-position: center;
 }
-#d_6 {
-  background-image: url("./assets/images/race.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
+
 #race {
   display: grid;
   grid-template-columns: repeat(7, 48px);
-  grid-template-rows: repeat(6, 48px);
+  grid-template-rows: repeat(4, 48px);
   gap: 0;
 }
 .race_img {

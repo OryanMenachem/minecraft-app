@@ -3,6 +3,7 @@ const clickSound = new Audio("./assets/audio/click-sound.mp3");
 const minecraftMelody = new Audio("./assets/audio/minecraft-mod.mp3");
 const hitlerSpeech = new Audio("./assets/audio/Hitler-Speech.mp3");
 minecraftMelody.loop = true;
+const tree = document.querySelector("#tree");
 
 const btnAudio = document.querySelector(".btn--audio");
 const btnIcon = document.querySelector(".btn-icon");
@@ -81,8 +82,6 @@ if (germansUI && minecraftTitle && indexPage) {
 if (main) {
   for (let i = 0; i < 3000; i++) {
     const div = document.createElement("div");
-    div.classList.add("div", "div--tile");
-
     if (i <= 1199) div.classList.add("sky");
     else if (i <= 1299) div.classList.add("grass");
     else if (i <= 1799) div.classList.add("dirt");
@@ -171,3 +170,7 @@ items.forEach((item) => {
     setCursor(item.id);
   });
 });
+
+let randomNumber = Math.floor(Math.random() * (90 - 3 + 1)) + 3;
+tree.style.gridColumn = `${randomNumber} / ${randomNumber + 7}`;
+tree.style.gridRow = "3 / 14";
