@@ -129,3 +129,30 @@ if (main && tools) {
     }
   });
 }
+
+
+// Tool ID → cursor image mapping
+const toolCursors = {
+  "hand-axe": "./assets/images/hand-axe.png",
+  "garden-hoe": "./assets/images/garden-hoe.png",
+  "garden-shovel": "./assets/images/garden-shovel.png",
+  "garden-shears": "./assets/images/garden-shears.png"
+};
+// All tool items inside inventory
+const items = document.querySelectorAll("#Tool-and-tile-stack .item");
+
+// Change cursor to tool image (or default if not found)
+function setCursor(toolId) {
+  if(toolCursors[toolId]) {
+    document.body.style.cursor = `url("${toolCursors[toolId]}") 16 16, auto`;
+  } else {
+    document.body.style.cursor = "auto";
+  }
+}
+
+// On click: update cursor to the clicked tool
+items.forEach(item => {
+  item.addEventListener("click", () => {
+    setCursor(item.id);
+  });
+});
